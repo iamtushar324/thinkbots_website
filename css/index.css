@@ -63,10 +63,12 @@ a {
 }
 
 #loading-logo {
+
     font-size: 3em;
     margin-top: calc(50vh - 2em);
     animation: loadinglogo 0.5s linear infinite alternate;
 }
+
 
 
 
@@ -265,7 +267,7 @@ nav:hover {}
     background-size: 100% auto;
     background-repeat: no-repeat;
     height: 60vw;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 #intro-overlay {
@@ -282,7 +284,7 @@ nav:hover {}
 
 
 #about {
-    margin-top: 0vw;
+    margin-top: -4vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

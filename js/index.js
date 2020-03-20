@@ -99,6 +99,7 @@ window.onscroll = function () {
     }
     else {
         document.getElementsByTagName("nav")[0].style.top = "-50px";
+        document.getElementsByTagName("nav")[0].style.transition = "0.05";
 
     }
 }
