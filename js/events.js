@@ -62,13 +62,10 @@ let eventh = document.getElementById('eventh')
 
 let loadingPage = document.getElementById("loading")
 
-introImg = new Image();
-introImg.src = "./img/events_img/music.jpeg";
-introImg.onload = () => {
-    loadingPage.style.display = "none";
-    eventh.style.transform = "translateY(0px) scale(1)"
+loadingPage.style.display = "none";
+eventh.style.transform = "translateY(-30px) scale(1.2)"
 
-}
+
 
 
 

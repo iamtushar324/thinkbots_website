@@ -49,7 +49,16 @@ window.onload = () => {
 // fest video for screen
 
 let isVideoOn = false;
-$("#about-img")[0].onclick = () => {
+$("#about-video")[0].onclick = () => {
+    if (!(isVideoOn)) {
+        $("#fest-video")[0].style.display = "block";
+        $("#fest-video-overlay")[0].style.display = "block";
+        isVideoOn = true;
+    }
+
+
+}
+$("#fest-video-mob")[0].onclick = () => {
     if (!(isVideoOn)) {
         $("#fest-video")[0].style.display = "block";
         $("#fest-video-overlay")[0].style.display = "block";
@@ -88,17 +97,17 @@ $("#fest-video-overlay")[0].onclick = () => {
 // nav bar 
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
-    if (this.pageYOffset > 225) {
+    if (this.pageYOffset > 350) {
         let currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
             document.getElementsByTagName("nav")[0].style.top = "0";
         } else {
-            document.getElementsByTagName("nav")[0].style.top = "-50px";
+            document.getElementsByTagName("nav")[0].style.top = "-100px";
         }
         prevScrollpos = currentScrollPos;
     }
     else {
-        document.getElementsByTagName("nav")[0].style.top = "-50px";
+        document.getElementsByTagName("nav")[0].style.top = "-100px";
         document.getElementsByTagName("nav")[0].style.transition = "0.05";
 
     }

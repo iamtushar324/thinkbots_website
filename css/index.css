@@ -1,3 +1,14 @@
+:root {
+    --dc: #091020;
+    --lllc: #E1F4FB;
+    --llc: #66fcf1;
+    --lc: #101d3a;
+    --rc: #1F2833;
+}
+
+
+
+
 #fest-video-mob {
     display: none;
 }
@@ -8,11 +19,7 @@ body {
     font-family: monospace;
     padding: 0px;
     margin: 0px;
-    background: linear-gradient(-45deg, #1F2833,
-            #C5C6C7,
-            #45A29E, #66FCF1);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    background-color: var(--rc);
 }
 
 @keyframes gradient {
@@ -34,7 +41,7 @@ html {
 }
 
 * {
-    color: #C5C6C7;
+    color: var(--lllc);
     font-family: 'Josefin Sans', sans-serif;
     margin: 0px;
     padding: 0px;
@@ -52,7 +59,7 @@ a {
 #loading {
 
 
-    background-color: #1F2833;
+    background-color: var(--dc);
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -127,7 +134,7 @@ a {
 nav {
     display: flex;
     justify-content: space-evenly;
-    background-color: #1F2833;
+    background-color: var(--dc);
     width: 100%;
     height: 50px;
     padding: 0px;
@@ -142,6 +149,10 @@ nav {
     position: absolute;
     background-color: transparent;
     top: 0px
+}
+
+#nav {
+    box-shadow: 0px 0px 50px rgb(14, 14, 14);
 }
 
 nav:hover {}
@@ -201,7 +212,21 @@ nav:hover {}
 
 
 
+#about-video svg {
+    position: relative;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    fill: rgb(73, 73, 73);
+    height: 100px;
+    width: 100px;
 
+}
+
+#about-video:hover #play-btn {
+    fill: rgb(214, 27, 27);
+
+}
 
 
 
@@ -229,7 +254,7 @@ nav:hover {}
 
 .register {
     border: solid 2px white;
-    color: #1F2833;
+    color: var(--dc);
     background-color: #45A29E;
     padding-right: 10px;
 }
@@ -243,7 +268,7 @@ nav:hover {}
 
 .register:hover {
 
-    background-color: #1F2833;
+    background-color: var(--dc);
 }
 
 
@@ -266,7 +291,7 @@ nav:hover {}
     background-image: url(../img/web/vr_bg_1.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
-    height: 60vw;
+    height: 55vw;
     opacity: 1;
 }
 
@@ -276,7 +301,7 @@ nav:hover {}
     left: 0px;
     height: 110%;
     width: 100%;
-    background-color: #1F2833;
+    background-color: var(--dc);
     opacity: 0;
 
 }
@@ -284,12 +309,15 @@ nav:hover {}
 
 
 #about {
-    margin-top: -4vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row;
-    background-color: #1F2833;
+    background-color: var(--dc);
+    /* border-top: solid 1px white; */
+    border-bottom: solid 2px white;
+    box-shadow: 0px -1px 100px rgb(0, 0, 0);
+    padding: 20px 10px 40px 10px;
 }
 
 #about h1 {
@@ -319,15 +347,18 @@ nav:hover {}
     /* border: solid 2px black;s */
 }
 
-#about-img {
-    height: auto;
-    width: 100%;
+#about-video {
+    height: 15vw;
+    width: 30vw;
     border-radius: 10px;
     box-shadow: 3px 3px 20px black;
     transition: 0.5s;
+    background-color: #45A29E;
+    background-image: url(../img/web/vr_bg_1.jpg);
+    background-size: 100%;
 }
 
-#about-img:hover {
+#about-video:hover {
     transform: scale(1.05);
 }
 
@@ -381,18 +412,24 @@ nav:hover {}
 }
 
 #gallery-head {
-    color: #0B0C10;
+    color: var(--llc);
     text-align: center;
     font-family: cursive;
     font-size: 4em;
+    margin-top: 2vw;
 
+}
+
+.gallSec {
+    background-image: radial-gradient(rgb(100, 124, 155), #091930, var(--dc));
+    background-size: 100% 250%;
 }
 
 
 
 #gallery {
     font-size: 2em;
-    margin: 10vw auto 20px auto;
+    margin: 2vw auto 20px auto;
     color: #0B0C10;
     height: auto;
     display: flex;
@@ -564,7 +601,7 @@ h1 {
         display: flex;
         flex-direction: column;
         height: 120vh;
-        background-color: #1F2833;
+        background-color: var(--dc);
         justify-content: flex-start;
         width: 50%;
         padding: 0px;
@@ -678,33 +715,19 @@ h1 {
     }
 
     #intro {
-        background-color: #C5C6C7;
-        background-image: none;
-        background-size: 100% auto;
+        background-image: url(../img/web/vr_bg_2.jpg);
+        background-size: auto 100%;
         background-repeat: no-repeat;
         height: 100vh;
 
     }
 
-    #intro {
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
-        animation: gradient 10s ease infinite;
-    }
+    /* #nav {
+        display: none;
+    } */
 
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
 
-        30% {
-            background-position: 100% 50%;
-        }
 
-        100% {
-            background-position: 0% 50%;
-        }
-    }
 
 
     #Layer_1 {
@@ -752,6 +775,18 @@ h1 {
     }
 
     #fest-video-mob {
+
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer */
+        -khtml-user-select: none;
+        /* KHTML browsers (e.g. Konqueror) */
+        -webkit-user-select: none;
+        /* Chrome, Safari, and Opera */
+        -webkit-touch-callout: none;
+
+        cursor: pointer;
         border: solid 2px white;
         padding: 10px;
         margin: 30px;
@@ -764,7 +799,10 @@ h1 {
 
 
 
-
+    #ns {
+        /* display: none; */
+        z-index: 2;
+    }
 
 
 
@@ -802,6 +840,14 @@ h1 {
 
 }
 
+/* #intro {
+    background-image: url(../img/web/vr_bg_2.jpg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    height: 70vh; 
+
+} */
+
 
 
 
@@ -811,7 +857,7 @@ h1 {
 
 
 .site-footer {
-    background-color: #1F2833;
+    background-color: var(--dc);
     padding: 20px 0 20px;
     font-size: 15px;
     line-height: 24px;
