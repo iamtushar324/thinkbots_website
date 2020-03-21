@@ -39,10 +39,10 @@ nav_btn.onclick = () => {
 // for loading page
 let loadingPage = document.getElementById("loading")
 
-window.onload = () => {
-    loadingPage.style.display = "none";
 
-}
+loadingPage.style.display = "none";
+
+
 
 
 

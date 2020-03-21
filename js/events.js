@@ -39,7 +39,7 @@ nav_btn.onclick = () => {
 //nav links 
 
 function goHome() {
-    window.location.href = "index.html"
+    window.location.href = "../index.html"
 
 }
 function goEvents() {
@@ -62,8 +62,7 @@ let eventh = document.getElementById('eventh')
 
 let loadingPage = document.getElementById("loading")
 
-loadingPage.style.display = "none";
-eventh.style.transform = "translateY(-30px) scale(1.2)"
+
 
 
 
@@ -78,3 +77,4 @@ function rollEvent(v) {
 
 
 
+loadingPage.style.display = "none";
