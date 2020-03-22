@@ -6,6 +6,15 @@
     --rc: #1F2833;
 }
 
+/* :root {
+    --dc: #2F3B4E;
+    --lllc: #E1F4FB;
+    --llc: #66fcf1;
+    --lc: #F5F7F7;
+    --rc: #1F2833;
+    --ddc: #2F3B4E
+} */
+
 
 
 
@@ -19,7 +28,7 @@ body {
     font-family: monospace;
     padding: 0px;
     margin: 0px;
-    background-color: var(--rc);
+    background-color: var(--dc);
 }
 
 @keyframes gradient {
@@ -288,7 +297,7 @@ nav:hover {}
 
 #intro {
     background-color: #0B0C10;
-    background-image: url(../img/web/vr_bg_1.jpg);
+    background-image: url(../img/web/tinified/vr_bg_1.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
     height: 55vw;
@@ -313,11 +322,12 @@ nav:hover {}
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row;
-    background-color: var(--dc);
+    background-color: var(--lc);
+    color: var(--lllc);
     /* border-top: solid 1px white; */
-    border-bottom: solid 2px white;
+    /* border-bottom: solid 2px white; */
     box-shadow: 0px -1px 100px rgb(0, 0, 0);
-    padding: 20px 10px 40px 10px;
+    padding: 100px 10px 100px 10px;
 }
 
 #about h1 {
@@ -362,6 +372,14 @@ nav:hover {}
     transform: scale(1.05);
 }
 
+
+.introOver {
+    position: absolute;
+    height: 120%;
+    width: 100%;
+    background-color: var(--dc);
+    opacity: 0.5;
+}
 
 
 
@@ -412,7 +430,7 @@ nav:hover {}
 }
 
 #gallery-head {
-    color: var(--llc);
+    color: var(--lllc);
     text-align: center;
     font-family: cursive;
     font-size: 4em;
@@ -421,8 +439,10 @@ nav:hover {}
 }
 
 .gallSec {
-    background-image: radial-gradient(rgb(100, 124, 155), #091930, var(--dc));
-    background-size: 100% 250%;
+
+
+    background-color: var(--dc);
+    color: var(--lllc);
 }
 
 
@@ -863,4 +883,212 @@ h1 {
     line-height: 24px;
     color: #737373;
     text-align: center;
+}
+
+
+
+/* project page  */
+
+.card {
+    position: relative;
+    height: 350px;
+    width: 300px;
+    /* border: solid 1px black; */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    margin: 50px;
+    margin-top: 35px;
+    overflow: visible;
+    z-index: 2;
+}
+
+
+.front,
+.back {
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    text-align: center;
+    background-color: blueviolet;
+    transition: transform 1s;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 2px 14px black;
+
+    /* margin: 20px auto 20px auto; */
+}
+
+
+
+#regBtn {
+    border: solid 1px white;
+    padding: 5px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    margin-top: 30px;
+
+}
+
+.front img {
+    height: 100%;
+    width: 100%;
+}
+
+.front {}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: var(--dc);
+    padding: 20px;
+    border: solid 2px white;
+    box-sizing: border-box;
+}
+
+.card:hover .front {
+    transform: rotateY(180deg)
+}
+
+.card:hover .back {
+    transform: rotateY(360deg)
+}
+
+
+
+#events_con {
+    background-color: var(--dc);
+    ;
+}
+
+
+
+#events_con {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: var(--dc);
+
+
+
+}
+
+
+#events_con {
+    overflow-x: hidden;
+    font-family: monospace;
+    padding: 0px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    background-color: var(--dc);
+}
+
+.drama {
+    text-align: center;
+}
+
+.con {
+    padding: 30px;
+    background-color: var(--dc);
+
+}
+
+
+.eveH {
+    margin: 0px;
+    width: 100%;
+    background-color: var(--dc);
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
+    padding: 2px;
+    top: 50px;
+    right: 0px;
+    z-index: 5;
+    text-align: center;
+
+
+
+}
+
+.eveH h1 {
+    margin: 10px;
+}
+
+.proSec {
+    background-color: var(--dc);
+    color: var(--lllc);
+}
+
+.proCard h2 {
+    color: white;
+}
+
+/* team section  */
+
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    background-color: var(--lc);
+    color: var(--ddc);
+}
+
+.proCard {
+    height: 400px;
+    width: 300px;
+    background-color: #0a1325;
+    border-radius: 30px;
+    border: solid 2px white;
+    margin: 80px 30px 80px 30px;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgb(143,
+            142,
+            140);
+}
+
+h5 {
+    color: rgb(211, 195, 195);
+}
+
+
+.proimg {
+    height: 150px;
+    width: 150px;
+    border-radius: 80px;
+    background-color: #d0d2d8;
+    margin: 40px auto 10px auto;
+    overflow: hidden;
+
+
+}
+
+
+
+.proimg img {
+    /* height: 150px; */
+    width: 150px;
+    overflow: hidden;
+}
+
+
+
+
+.social {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.social img {
+    border-radius: 3px;
+    height: 40px;
+    width: 40px;
+
 }
